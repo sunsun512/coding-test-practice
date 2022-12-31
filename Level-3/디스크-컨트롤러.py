@@ -7,9 +7,9 @@ def solution(jobs):
     
     while i < len(jobs):
         # 현재 시점에서 처리할 수 있는 작업들 저장
-        for j in jobs:
-            if start < j[0] <= now:
-                heapq.heappush(heap, (j[1], j[0]))
+        for job in jobs:
+            if start < job[0] <= now:
+                heapq.heappush(heap, (job[1], job[0]))
         
         if heap:
             cur = heapq.heappop(heap)
